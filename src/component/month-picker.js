@@ -7,7 +7,7 @@ export default class MonthPicker extends Component {
 
     constructor(props){
         super(props);
-        this.state = {cells:[], selectedDate:new Date(), currentView:"years",renderDate:false};
+        this.state = {cells:[], selectedDate:new Date(0), currentView:"years",renderDate:false};
         this.selectCell = this.selectCell.bind(this);
         this.previous = this.previous.bind(this);
         this.next = this.next.bind(this);
@@ -24,8 +24,6 @@ export default class MonthPicker extends Component {
     selectCell(cellContent, index){
         if(typeof cellContent === 'number'){
             let date = this.state.selectedDate;
-            if(date ==="")
-                date = new Date();
             date.setFullYear(cellContent);
             this.setState({selectedDate:date});
 
@@ -36,7 +34,8 @@ export default class MonthPicker extends Component {
             let date = this.state.selectedDate;
             date.setMonth(index);
             this.setState({selectedDate:date, renderDate:true});
-            this.props.onChange = (date)=>{return this.state.selectedDate;}
+            if(this.props.onChange && typeof this.props.onChange === "function")
+                this.props.onChange(this.state.selectedDate);
         }
     }
 
