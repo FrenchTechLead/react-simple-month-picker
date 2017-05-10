@@ -1,0 +1,31 @@
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    text-align: center;
+}
+.col:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before, .group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_1_of_3 { width: 33.33%; }
