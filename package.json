@@ -3,7 +3,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Akram MECHERI",
   "repository": {
     "type": "git",
@@ -29,5 +29,6 @@
     "babel-core": "^6.7.6",
     "babel-preset-react": "^6.5.0"
   },
-  "name": "react-simple-month-picker"
+  "name": "react-simple-month-picker",
+  "description": "This is a very light component that makes it possible to select a year and a month and automatically sets the day to the first day of the month then it returns the correspondent Javascript Date Object;"
 }
