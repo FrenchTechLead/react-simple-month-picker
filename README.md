@@ -10,7 +10,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MonthPicker from 'react-simple-month-picker';
 
-ReactDOM.render(<MonthPicker onChane={(date)=>{console.log(date);}} />,
+ReactDOM.render(<MonthPicker onChange={(date)=>{console.log(date);}} />,
   document.getElementById('root')
 );
 ```
