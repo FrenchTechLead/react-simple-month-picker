@@ -22,6 +22,12 @@ ReactDOM.render(<MonthPicker onChange={(date)=>{console.log(date);}} />,
 ```
 When the user selects a month the value can be retreived by the props function [onChange].
 
+### Props:
+|  Prop | is Required ?   | Description   |
+|---|---|---|
+| function : onChange  | false  | A callback function that is executed on month selection   |
+|  Array: months |  false | A JavaScript Array of Strings that must be of length 12, the array represents the months names, by default it's set to ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]  |
+
 ### Issues :
 For any suggestion you can [open in issue here](https://github.com/Meshredded/react-simple-month-picker/issues).
 

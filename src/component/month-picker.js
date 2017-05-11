@@ -6,8 +6,12 @@ import '../css/picker-styles.css';
 export default class MonthPicker extends Component {
 
     constructor(props){
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         super(props);
-        this.state = {cells:[], selectedDate:new Date(0), currentView:"years",renderDate:false};
+        if(this.props.months && this.props.months.length === 12)
+            months = this.props.months;
+
+        this.state = {cells:[], selectedDate:new Date(0), currentView:"years",renderDate:false, months:months};
         this.selectCell = this.selectCell.bind(this);
         this.previous = this.previous.bind(this);
         this.next = this.next.bind(this);
@@ -27,7 +31,7 @@ export default class MonthPicker extends Component {
             date.setFullYear(cellContent);
             this.setState({selectedDate:date});
 
-            let months = require("./../config/locals").months;
+            let months = this.state.months;
             this.setState({currentView:"months",renderDate:false});
             this.setState({cells:months});
         }else{
