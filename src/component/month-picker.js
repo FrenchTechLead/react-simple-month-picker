@@ -84,15 +84,15 @@ export default class MonthPicker extends Component {
             selectedString = monthString+"-"+selectedYear;
         }
         let head =
-            <div className="section group">
-                <div className="col span_1_of_3 arrows" onClick={()=>{this.previous()}}>&lt;</div>
-                <div className="col span_1_of_3 selected_date">{selectedString}</div>
-                <div className="col span_1_of_3 arrows" onClick={()=>{this.next()}}>&gt;</div>
+            <div className="section_mp group_mp">
+                <div className="col_mp span_1_of_3_mp arrows_mp" onClick={()=>{this.previous()}}>&lt;</div>
+                <div className="col_mp span_1_of_3_mp selected_date_mp">{selectedString}</div>
+                <div className="col_mp span_1_of_3_mp arrows_mp" onClick={()=>{this.next()}}>&gt;</div>
             </div>;
         let body = [];
         for( let i = 0 ; i< 12 ; i++){
             let cellContent = this.state.cells[i];
-            body.push(<div key={i}  onClick={()=>{this.selectCell(cellContent, i)}} className={"col span_1_of_3"}>{cellContent}</div>);
+            body.push(<div key={i}  onClick={()=>{this.selectCell(cellContent, i)}} className={"col_mp span_1_of_3_mp"}>{cellContent}</div>);
         }
 
 

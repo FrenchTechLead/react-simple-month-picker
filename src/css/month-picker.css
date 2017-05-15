@@ -1,31 +1,31 @@
 /*  SECTIONS  */
-.section {
+.section_mp {
     clear: both;
     padding: 0px;
     margin: 0px;
 }
 
 /*  COLUMN SETUP  */
-.col {
+.col_mp {
     display: block;
     float:left;
     text-align: center;
 }
-.col:first-child {
+.col_mp:first-child {
     margin-left: 0;
 }
 
 /*  GROUPING  */
-.group:before, .group:after {
+.group_mp:before, .group:after {
     content:"";
     display:table;
 }
-.group:after {
+.group_mp:after {
     clear:both;
 }
-.group {
+.group_mp {
     zoom:1; /* For IE 6/7 */
 }
 
 /*  GRID OF THREE  */
-.span_1_of_3 { width: 33.33%; }
+.span_1_of_3_mp { width: 33.33%; }
