@@ -11,7 +11,7 @@ export default class MonthPicker extends Component {
         if(this.props.months && this.props.months.length === 12)
             months = this.props.months;
 
-        this.state = {cells:[], selectedDate:new Date(0), currentView:"years",renderDate:false, months:months};
+        this.state = {cells:[], selectedDate:props.selectedDate || new Date(0), currentView:"years",renderDate:false, months:months};
         this.selectCell = this.selectCell.bind(this);
         this.previous = this.previous.bind(this);
         this.next = this.next.bind(this);
