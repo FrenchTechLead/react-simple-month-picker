@@ -25,6 +25,7 @@ When the user selects a month the value can be retreived by the props function [
 ### Props:
 |  Prop | is Required ?   | Description   |
 |---|---|---|
+| momentjs date : selectedDate  | false  | Default date   |
 | function : onChange  | false  | A callback function that is executed on month selection   |
 |  Array: months |  false | A JavaScript Array of Strings that must be of length 12, the array represents the months names, by default it's set to ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]  |
 
