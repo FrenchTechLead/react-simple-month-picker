@@ -97,17 +97,27 @@ export default class MonthPicker extends Component {
                 <div className="col_mp span_1_of_3_mp arrows_mp" onClick={()=>{this.next()}}>&gt;</div>
             </div>;
         let body = [];
-        for( let i = 0 ; i< 12 ; i++){
+        for (let i = 0 ; i< 12 ; i++){
             let cellContent = this.state.cells[i];
-            body.push(<div key={i}  onClick={()=>{this.selectCell(cellContent, i)}} className={"col_mp span_1_of_3_mp"}>{cellContent}</div>);
+            body.push(
+                <div
+                    key={i}
+                    onClick={()=>{this.selectCell(cellContent, i)}}
+                    className={`col_mp span_1_of_3_mp ${this.state.renderDate && (
+                        this.state.selectedDate.month() === i && 'active'
+                    )}`}
+                >
+                    {cellContent}
+                </div>
+            );
         }
 
 
         return (
-                <div>
-                    {head}
-                    {body}
-                </div>
+            <div className="simple-month-picker">
+                {head}
+                {body}
+            </div>
         );
     }
 
