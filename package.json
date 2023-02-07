@@ -1,7 +1,7 @@
 {
   "name": "react-simple-month-picker",
   "description": "This is a very light component that makes it possible to select a year and a month and automatically sets the day to the first day of the month then it returns the correspondent Javascript Date Object;",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
